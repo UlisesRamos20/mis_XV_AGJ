@@ -159,6 +159,51 @@
         background-color: #b6886e;
       }
 
+      .dresscode {
+        margin-top: 40px;
+        text-align: center;
+      }
+
+      .codigo-texto {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        color: #4a2c2a;
+        margin-top: 5px;
+      }
+
+      .collage {
+        margin: 50px auto;
+        text-align: center;
+        max-width: 800px;
+        padding: 0 20px;
+      }
+
+      .titulo-collage {
+        font-family: 'Great Vibes', cursive;
+        font-size: 32px;
+        color: #4a2c2a;
+        margin-bottom: 20px;
+      }
+
+      .collage-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 15px;
+      }
+
+      .collage-grid img {
+        width: 100%;
+        border-radius: 20px;
+        object-fit: cover;
+        height: 200px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .collage-grid img:hover {
+        transform: scale(1.03);
+      }
+
   </style>
 </head>
 <body>
@@ -195,7 +240,7 @@
         <span class="separador">|</span>
         <span class="hora">5:00 <small>P.M.</small></span>
       </div>
-      <div class="direccion">Dirección 123, Ciudad</div>
+      <div class="direccion">Perfecto I. Aranda, Celaya Gto.</div>
       <a class="btn-ubicacion" href="https://maps.app.goo.gl/PayypqY4Z6Eo2bEW6?g_st=aw" target="_blank">VER UBICACIÓN</a>
     </div>
 
@@ -209,10 +254,26 @@
           <span class="separador">|</span>
           <span class="hora">7:00 <small>P.M.</small></span>
         </div>
-        <div class="direccion">Salón La Terraza, Av. Irrigación #525, Celaya Gto.</div>
+        <div class="direccion">Av. Irrigación #525, Celaya Gto.</div>
         <a class="btn-ubicacion" href="https://maps.app.goo.gl/88V7unrP1sWTn5LM8?g_st=aw" target="_blank">VER UBICACIÓN</a>
       </div>
     </div>
+
+    <div class="dresscode">
+      <img src="clothes.png" alt="Dress Code" class="misa-img">
+      <p class="misa-texto">DRESS CODE</p>
+      <p class="codigo-texto">¡Formal!</p>
+    </div>
+
+    <div class="collage">
+      <div class="collage-grid">
+        <img src="2.jpg" alt="Foto 1">
+        <img src="3.jpg" alt="Foto 2">
+        <img src="4.jpg" alt="Foto 3">
+        <img src="5.jpg" alt="Foto 4">
+      </div>
+    </div>
+
   </div>
 
   <script>
