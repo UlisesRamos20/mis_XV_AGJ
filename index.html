@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación XV Años</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+      color: #333;
+      text-align: center;
+      padding: 0;
+    }
+
+    .banner {
+      background-image: url("1.jpg"); 
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .nombre {
+      font-family: 'Great Vibes', cursive;
+      font-size: 60px;
+    }
+
+    .subtitulo {
+      font-size: 18px;
+      letter-spacing: 2px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .invitacion {
+      margin: 40px 20px;
+    }
+
+    .invitacion h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #4a2c2a;
+    }
+
+    .invitacion p {
+      max-width: 400px;
+      margin: auto;
+      font-size: 16px;
+    }
+
+    .circulos {
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .circulo {
+      width: 60px;
+      height: 60px;
+      background-color: #caa089;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      flex-direction: column;
+    }
+
+    .circulo span {
+      font-size: 14px;
+    }
+
+    .cheers {
+      margin-top: 20px;
+    }
+
+    .cheers img {
+      width: 50px;
+      margin: 10px;
+    }
+
+    .cheers p {
+      font-family: 'Great Vibes', cursive;
+      font-size: 24px;
+      color: #4a2c2a;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="banner">
+    <div class="nombre">Alexia</div>
+    <div class="subtitulo">¡MIS XV AÑOS!</div>
+  </div>
+
+  <div class="invitacion">
+    <h2>¡Estás invitado!</h2>
+    <p>Nos encantaría que seas parte de este momento tan especial para nosotros ¡Falta poco!</p>
+    
+    <div class="circulos">
+      <div class="circulo"><div id="dias">0</div><span>Días</span></div>
+      <div class="circulo"><div id="horas">0</div><span>Horas</span></div>
+      <div class="circulo"><div id="minutos">0</div><span>Min</span></div>
+      <div class="circulo"><div id="segundos">0</div><span>Seg</span></div>
+    </div>
+
+    <div class="cheers">
+      <img src="gif.gif">
+      <p>Cheers!</p>
+    </div>
+  </div>
+
+  <script>
+    const fechaObjetivo = new Date("2025-05-24T17:00:00").getTime();
+
+    function actualizarContador() {
+      const ahora = new Date().getTime();
+      const diferencia = fechaObjetivo - ahora;
+
+      if (diferencia <= 0) {
+        document.getElementById("dias").textContent = 0;
+        document.getElementById("horas").textContent = 0;
+        document.getElementById("minutos").textContent = 0;
+        document.getElementById("segundos").textContent = 0;
+        return;
+      }
+
+      const segundos = Math.floor((diferencia / 1000) % 60);
+      const minutos = Math.floor((diferencia / 1000 / 60) % 60);
+      const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+
+      document.getElementById("dias").textContent = dias;
+      document.getElementById("horas").textContent = horas;
+      document.getElementById("minutos").textContent = minutos;
+      document.getElementById("segundos").textContent = segundos;
+    }
+
+    setInterval(actualizarContador, 1000);
+    actualizarContador(); // inicial
+  </script>
+
+</body>
+</html>
