@@ -172,36 +172,30 @@
       }
 
       .collage {
-        margin: 50px auto;
+        margin: 40px auto;
         text-align: center;
-        max-width: 800px;
-        padding: 0 20px;
+        max-width: 280px;
       }
 
       .titulo-collage {
         font-family: 'Great Vibes', cursive;
-        font-size: 32px;
+        font-size: 28px;
         color: #4a2c2a;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
       }
 
       .collage-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 15px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2px;
       }
 
       .collage-grid img {
         width: 100%;
-        border-radius: 20px;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         object-fit: cover;
-        height: 200px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease;
-      }
-
-      .collage-grid img:hover {
-        transform: scale(1.03);
       }
 
   </style>
