@@ -100,6 +100,65 @@
       font-size: 24px;
       color: #4a2c2a;
     }
+
+    .misa {
+        margin-top: 40px;
+      }
+
+      .misa-img {
+        width: 50px;
+        margin-bottom: 10px;
+      }
+
+      .misa-texto {
+        font-family: 'Great Vibes', cursive;
+        font-size: 28px;
+        color: #4a2c2a;
+      }
+
+      .evento-info {
+        margin-top: 30px;
+        font-family: 'Montserrat', sans-serif;
+        color: #4a2c2a;
+        text-align: center;
+      }
+
+      .fecha-hora {
+        font-size: 20px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .fecha-hora small {
+        font-size: 12px;
+      }
+
+      .direccion {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #555;
+      }
+
+      .btn-ubicacion {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #caa089;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 14px;
+        transition: background-color 0.3s;
+      }
+
+      .btn-ubicacion:hover {
+        background-color: #b6886e;
+      }
+
   </style>
 </head>
 <body>
@@ -123,6 +182,36 @@
     <div class="cheers">
       <img src="gif.gif">
       <p>Cheers!</p>
+    </div>
+
+    <div class="misa">
+      <img src="church.png" alt="Iglesia" class="misa-img">
+      <p class="misa-texto">La misa se celebrará en la "capilla de san francisco" </p>
+    </div>
+
+    <div class="evento-info">
+      <div class="fecha-hora">
+        <span class="fecha">24 MAY</span>
+        <span class="separador">|</span>
+        <span class="hora">5:00 <small>P.M.</small></span>
+      </div>
+      <div class="direccion">Dirección 123, Ciudad</div>
+      <a class="btn-ubicacion" href="https://maps.app.goo.gl/PayypqY4Z6Eo2bEW6?g_st=aw" target="_blank">VER UBICACIÓN</a>
+    </div>
+
+    <div class="celebracion">
+      <img src="dance.png" alt="Salón" class="misa-img">
+      <p class="misa-texto">La celebración será en el salón "La terraza"</p>
+    
+      <div class="evento-info">
+        <div class="fecha-hora">
+          <span class="fecha">24 MAY</span>
+          <span class="separador">|</span>
+          <span class="hora">7:00 <small>P.M.</small></span>
+        </div>
+        <div class="direccion">Salón La Terraza, Av. Irrigación #525, Celaya Gto.</div>
+        <a class="btn-ubicacion" href="https://maps.app.goo.gl/88V7unrP1sWTn5LM8?g_st=aw" target="_blank">VER UBICACIÓN</a>
+      </div>
     </div>
   </div>
 
