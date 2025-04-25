@@ -29,10 +29,10 @@
       height: 400px;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end; /* Mueve el contenido al fondo */
+      justify-content: flex-end; 
       align-items: center;
       color: white;
-      padding-bottom: 20px; /* Espacio desde el borde inferior */
+      padding-bottom: 20px; 
       text-align: center;
     }
 
@@ -270,7 +270,7 @@
       height: 20px;
     }
     .celebracion {
-      margin: 50px 0; /* 50px arriba y abajo, 0 a los lados */
+      margin: 50px 0; 
     }
 
     .despedida {
@@ -340,6 +340,16 @@
     .contenido-overlay button:hover {
       background-color: #a8765f;
     }
+    
+    #overlay-bienvenida {
+      transition: opacity 3s ease;
+    }
+
+    #overlay-bienvenida.oculto {
+      opacity: 0;
+      pointer-events: none;
+    }
+
   </style>
 </head>
 
@@ -441,12 +451,16 @@
 
   <script>
     function iniciarInvitacion() {
-      const audio = document.getElementById("musicaFondo");
-      audio.play().catch(e => console.log("Audio bloqueado:", e));
-      
-      const overlay = document.getElementById("overlay-bienvenida");
+    const audio = document.getElementById("musicaFondo");
+    const overlay = document.getElementById("overlay-bienvenida");
+    audio.play().catch(e => console.log("Audio bloqueado:", e));
+
+    overlay.classList.add("oculto");
+
+    setTimeout(() => {
       overlay.style.display = "none";
-    }
+    }, 3000);
+  }
     const fechaObjetivo = new Date("2025-05-24T17:00:00").getTime();
 
     function actualizarContador() {
