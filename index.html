@@ -350,6 +350,27 @@
       pointer-events: none;
     }
 
+    @keyframes fadeUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .collage-grid img {
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .collage-grid img.visible {
+      animation: fadeUp 0.8s ease forwards;
+    }
+
   </style>
 </head>
 
@@ -361,7 +382,6 @@
   </div>
 </div>
 
-<!-- Audio -->
 <audio id="musicaFondo" loop>
   <source src="musica.mp3" type="audio/mpeg">
   Tu navegador no soporta audio HTML5.
@@ -451,16 +471,36 @@
 
   <script>
     function iniciarInvitacion() {
-    const audio = document.getElementById("musicaFondo");
-    const overlay = document.getElementById("overlay-bienvenida");
-    audio.play().catch(e => console.log("Audio bloqueado:", e));
+      const audio = document.getElementById("musicaFondo");
+      const overlay = document.getElementById("overlay-bienvenida");
+      audio.play().catch(e => console.log("Audio bloqueado:", e));
 
-    overlay.classList.add("oculto");
+      overlay.classList.add("oculto");
 
-    setTimeout(() => {
-      overlay.style.display = "none";
-    }, 3000);
-  }
+      setTimeout(() => {
+        overlay.style.display = "none";
+      }, 3000);
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const imgs = entry.target.querySelectorAll("img");
+          imgs.forEach((img, index) => {
+            setTimeout(() => img.classList.add("visible"), index * 150); // efecto en cascada
+          });
+          observer.unobserve(entry.target); // solo una vez
+        }
+      });
+    }, {
+      threshold: 0.3 // cuando el 30% del collage esté visible
+    });
+
+    const collage = document.querySelector('.collage-grid');
+    if (collage) {
+      observer.observe(collage.parentElement);
+    }
+
     const fechaObjetivo = new Date("2025-05-24T17:00:00").getTime();
 
     function actualizarContador() {
