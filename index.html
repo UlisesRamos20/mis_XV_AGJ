@@ -221,7 +221,7 @@
     .collage-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 2px;
+      gap: 5px;
     }
 
     .collage-grid img {
@@ -273,10 +273,29 @@
       margin: 50px 0; /* 50px arriba y abajo, 0 a los lados */
     }
 
+    .despedida {
+      margin: 40px 20px;
+    }
+
+    .despedida h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #4a2c2a;
+    }
+
+    .despedida p {
+      font-family: 'Parisienne', cursive;
+      font-size: 24px;
+      color: #4a2c2a;
+    }
 
   </style>
 </head>
 <body>
+  <audio id="musicaFondo" loop muted autoplay>
+    <source src="musica.mp3" type="audio/mpeg">
+  </audio>
 
   <div class="banner">
     <div class="nombre">Alexia</div>
@@ -351,9 +370,20 @@
       <p>Cheers!</p>
     </div>
 
+    <div class="despedida">
+      <h2>¡Te esperamos!</h2>
+      <p>Alexia</p>
+      
+    </div>
+
   </div>
 
   <script>
+    document.addEventListener('click', function () {
+      const audio = document.getElementById('musicaFondo');
+      audio.muted = false;
+      audio.play();
+    }, { once: true });
     const fechaObjetivo = new Date("2025-05-24T17:00:00").getTime();
 
     function actualizarContador() {
@@ -380,7 +410,8 @@
     }
 
     setInterval(actualizarContador, 1000);
-    actualizarContador(); // inicial
+    actualizarContador(); 
+    
   </script>
 
 </body>
