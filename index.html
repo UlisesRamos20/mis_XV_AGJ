@@ -105,140 +105,174 @@
       color: #4a2c2a;
     }
 
-    .misa {
-        margin-top: 40px;
-      }
+    .misa-img {
+      width: 50px;
+      margin-bottom: 10px;
+    }
 
-      .misa-img {
-        width: 50px;
-        margin-bottom: 10px;
-      }
+    .evento-infob {
+      margin-top: 30px;
+      font-family: 'Montserrat', sans-serif;
+      color: #4a2c2a;
+      text-align: center;
+    }
 
-      .misa-texto {
-        font-family: 'Great Vibes', cursive;
-        font-size: 28px;
-        color: #4a2c2a;
-      }
+    .fecha-hora {
+      font-size: 20px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
 
-      .evento-info {
-        margin-top: 30px;
-        font-family: 'Montserrat', sans-serif;
-        color: #4a2c2a;
-        text-align: center;
-      }
+    .fecha-hora small {
+      font-size: 12px;
+    }
 
-      .fecha-hora {
-        font-size: 20px;
-        font-weight: bold;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-      }
+    .direccionb {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #555;
+    }
 
-      .fecha-hora small {
-        font-size: 12px;
-      }
+    .btn-ubicacionb {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #caa089;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
 
-      .direccion {
-        margin-top: 10px;
-        font-size: 14px;
-        color: #555;
-      }
+    .btn-ubicacionb:hover {
+      background-color: #b6886e;
+    }
 
-      .btn-ubicacion {
-        display: inline-block;
-        margin-top: 15px;
-        padding: 10px 20px;
-        background-color: #caa089;
-        color: white;
-        text-decoration: none;
-        border-radius: 8px;
-        font-weight: bold;
-        font-size: 14px;
-        transition: background-color 0.3s;
-      }
+    .misa,
+    .dresscode {
+      background-color: #caa089;
+      color: white;
+      padding: 30px 15px;
+      border-radius: 10px;
+    }
 
-      .btn-ubicacion:hover {
-        background-color: #b6886e;
-      }
+    .misa .misa-texto,
+    .dresscode .misa-texto,
+    .dresscode .codigo-texto {
+      color: white;
+    }
 
-      .dresscode {
-        margin-top: 40px;
-        text-align: center;
-      }
+    .misa .evento-info,
+    .dresscode .evento-info {
+      color: white;
+    }
 
-      .codigo-texto {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 18px;
-        color: #4a2c2a;
-        margin-top: 5px;
-      }
+    .misa .direccion,
+    .dresscode .direccion {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #555;
+    }
 
-      .collage {
-        margin: 40px auto;
-        text-align: center;
-        max-width: 280px;
-      }
+    .misa .btn-ubicacion,
+    .dresscode .btn-ubicacion {
+      background-color: white;
+      color: #caa089;
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
 
-      .titulo-collage {
-        font-family: 'Great Vibes', cursive;
-        font-size: 28px;
-        color: #4a2c2a;
-        margin-bottom: 15px;
-      }
+    .misa .btn-ubicacion:hover,
+    .dresscode .btn-ubicacion:hover {
+      background-color: #f0e6e0;
+    }
 
-      .collage-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2px;
-      }
+    .codigo-texto {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      color: #4a2c2a;
+      margin-top: 5px;
+    }
 
-      .collage-grid img {
-        width: 100%;
-        height: auto;
-        border-radius: 15px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        object-fit: cover;
-      }
+    .collage {
+      margin: 40px auto;
+      text-align: center;
+      max-width: 280px;
+    }
 
-      .confirmacion {
-        margin: 50px auto;
-        text-align: center;
-        max-width: 300px;
-        padding: 0 20px;
-      }
+    .titulo-collage {
+      font-family: 'Great Vibes', cursive;
+      font-size: 28px;
+      color: #4a2c2a;
+      margin-bottom: 15px;
+    }
 
-      .confirmacion-texto {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 16px;
-        color: #333;
-        margin-bottom: 15px;
-      }
+    .collage-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+    }
 
-      .boton-confirmar {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        background-color: #caa089;
-        color: white;
-        font-weight: bold;
-        font-size: 16px;
-        text-decoration: none;
-        padding: 10px 18px;
-        border-radius: 30px;
-        transition: background-color 0.3s ease;
-      }
+    .collage-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      object-fit: cover;
+    }
 
-      .boton-confirmar:hover {
-        background-color: #a8765f;
-      }
+    .confirmacion {
+      margin: 50px auto;
+      text-align: center;
+      max-width: 300px;
+      padding: 0 20px;
+    }
 
-      .icono-boton {
-        width: 20px;
-        height: 20px;
-      }
+    .confirmacion-texto {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .boton-confirmar {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: #caa089;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    .boton-confirmar:hover {
+      background-color: #a8765f;
+    }
+
+    .icono-boton {
+      width: 20px;
+      height: 20px;
+    }
+    .celebracion {
+      margin: 50px 0; /* 50px arriba y abajo, 0 a los lados */
+    }
+
 
   </style>
 </head>
@@ -263,9 +297,6 @@
     <div class="misa">
       <img src="church.png" alt="Iglesia" class="misa-img">
       <p class="misa-texto">La misa se celebrará en la "capilla de san francisco" </p>
-    </div>
-
-    <div class="evento-info">
       <div class="fecha-hora">
         <span class="fecha">24 MAY</span>
         <span class="separador">|</span>
@@ -281,12 +312,12 @@
     
       <div class="evento-info">
         <div class="fecha-hora">
-          <span class="fecha">24 MAY</span>
+          <span class="fechab">24 MAY</span>
           <span class="separador">|</span>
-          <span class="hora">7:00 <small>P.M.</small></span>
+          <span class="horab">7:00 <small>P.M.</small></span>
         </div>
-        <div class="direccion">Av. Irrigación #525, Celaya Gto.</div>
-        <a class="btn-ubicacion" href="https://maps.app.goo.gl/88V7unrP1sWTn5LM8?g_st=aw" target="_blank">VER UBICACIÓN</a>
+        <div class="direccionb">Av. Irrigación #525, Celaya Gto.</div>
+        <a class="btn-ubicacionb" href="https://maps.app.goo.gl/88V7unrP1sWTn5LM8?g_st=aw" target="_blank">VER UBICACIÓN</a>
       </div>
     </div>
 
