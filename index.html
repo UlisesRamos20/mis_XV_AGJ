@@ -545,8 +545,8 @@
     <div class="comentarios">
       <h2>Deja tu felicitación 🎉</h2>
       <form id="form-comentario">
-        <input type="text" id="nombre" placeholder="Tu nombre" required>
-        <textarea id="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
         <button type="submit">Enviar</button>
       </form>
     
@@ -614,7 +614,7 @@
     setInterval(actualizarContador, 1000);
     actualizarContador(); 
 
-    const scriptURL = "https://script.google.com/macros/s/AKfycbxc6B7RPtnmXrE18AggfblEl2oqQ9FjhG0p-mgbfEOr0L1NfN0An9_Tc0MdyRZT0t351w/exec";
+    const scriptURL = "https://script.google.com/macros/s/AKfycbw9g4sb0bIeJd82d0tZuToK8HTt4RbZczbmf80EhJ8uInUh4rdrsP3XbQdVvDLjFZEebg/exec";
     const form = document.getElementById("form-comentario");
     const lista = document.getElementById("lista-comentarios");
 
